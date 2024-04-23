@@ -1,4 +1,11 @@
 # Docker
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Free Trial(11b9927e-28fd-4c28-8716-9875ea4e840d)'
+    azureContainerRegistry: '{"loginServer":"containerreg012.azurecr.io", "id" : "/subscriptions/11b9927e-28fd-4c28-8716-9875ea4e840d/resourceGroups/Web-App01/providers/Microsoft.ContainerRegistry/registries/containerreg012"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # Build and push an image to Azure Container Registry
 # https://docs.microsoft.com/azure/devops/pipelines/languages/docker
 
